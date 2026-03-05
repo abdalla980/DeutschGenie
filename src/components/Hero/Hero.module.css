@@ -1,0 +1,132 @@
+.hero {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fff9e6 0%, #fff 100%);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.headline {
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #000000;
+  background: #fff9cc;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  opacity: 1;
+}
+.subtext {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+  opacity: 1;
+}
+
+.ctaButton {
+  background: #4285f4;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-self: flex-start;
+  opacity: 1;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+}
+
+.images {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  opacity: 1;
+}
+
+.heroImage1,
+.heroImage2,
+.heroImage3 {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.heroImage1 {
+  transform: rotate(-15deg) translateX(-80px) translateY(-20px);
+  z-index: 3;
+}
+
+.heroImage2 {
+  transform: rotate(5deg) translateX(0) translateY(10px);
+  z-index: 2;
+}
+
+.heroImage3 {
+  transform: rotate(15deg) translateX(80px) translateY(-20px);
+  z-index: 1;
+}
+
+@media (max-width: 968px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .headline {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+
+  .images {
+    height: 300px;
+  }
+
+  .heroImage1,
+  .heroImage2,
+  .heroImage3 {
+    width: 150px;
+    max-height: 300px;
+  }
+
+  .heroImage1 {
+    transform: rotate(-10deg) translateX(-60px) translateY(-10px);
+  }
+
+  .heroImage2 {
+    transform: rotate(0deg) translateX(0) translateY(0);
+  }
+
+  .heroImage3 {
+    transform: rotate(10deg) translateX(60px) translateY(-10px);
+  }
+}
+

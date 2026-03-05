@@ -1,0 +1,95 @@
+.section {
+  padding: 5rem 2rem;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.qrContainer {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.qrCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.qrPlaceholder {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qrSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.qrLabel {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.decorative {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #e1bee7 0%, #ce93d8 100%);
+  border-radius: 50% 0 0 0;
+  opacity: 1;
+  z-index: 1;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .qrContainer {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .qrPlaceholder {
+    width: 150px;
+    height: 150px;
+  }
+
+  .decorative {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    right: -50px;
+  }
+}
+
+

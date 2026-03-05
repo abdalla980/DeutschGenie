@@ -1,0 +1,117 @@
+.section {
+  padding: 5rem 2rem;
+  background: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.graph {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.graphSvg {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+}
+
+.graphArea {
+  animation: drawPath 1.5s ease-out;
+}
+
+.graphLine {
+  animation: drawLine 1.5s ease-out;
+}
+
+@keyframes drawPath {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drawLine {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+  }
+}
+
+.graphLabel {
+  font-size: 14px;
+  fill: #444;
+  font-weight: 500;
+}
+
+.stats {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.statItem {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f5f5f5 0%, #fff 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.statItem::before {
+  content: '✓';
+  position: absolute;
+  left: 1rem;
+  color: #4caf50;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .statItem {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+    padding-left: 2.2rem;
+  }
+}
+
+

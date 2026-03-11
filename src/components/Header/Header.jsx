@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import styles from './Header.module.css'
 
@@ -7,23 +7,22 @@ const Header = () => {
   const logoRef = useRef(null)
   const navRef = useRef(null)
   const ctaRef = useRef(null)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     if (!logoRef.current || !navRef.current || !ctaRef.current) return
-    
-    // Set initial visibility
+
     gsap.set([logoRef.current, ctaRef.current], { opacity: 1 })
     gsap.set(Array.from(navRef.current.children), { opacity: 1 })
-    
+
     const tl = gsap.timeline()
     tl.from(logoRef.current, { x: -20, duration: 0.6 })
-      .from(navRef.current.children, { y: -10, duration: 0.4, stagger: 0.1 }, '-=0.3')
-      .from(ctaRef.current, { x: 20, duration: 0.6 }, '-=0.4')
+       .from(ctaRef.current, { x: 20, duration: 0.6 }, '-=0.4')
   }, [])
 
   const handleDownloadClick = (e) => {
     e.preventDefault()
-    // Scroll to download section
+    setMenuOpen(false)
     const downloadSection = document.querySelector('[data-section="download"]')
     if (downloadSection) {
       downloadSection.scrollIntoView({ behavior: 'smooth' })
@@ -34,28 +33,46 @@ const Header = () => {
     <header ref={headerRef} className={styles.header}>
       <div className={styles.container}>
         <div ref={logoRef} className={styles.logo}>
-          <div className={styles.logoIcon}>
-            <span className={styles.logoD}>D</span>
-            <span className={styles.logoG}>G</span>
-          </div>
+          <img src="/images/logo.png" alt="DeutschGenie logo" className={styles.logoImg} />
         </div>
+
         <nav ref={navRef} className={styles.nav} aria-label="Main navigation">
           <a href="#how-it-works" className={styles.navLink}>How it Works</a>
-          <a href="#benefits" className={styles.navLink}>Benefits</a>
+          <a href="#results" className={styles.navLink}>Results</a>
           <a href="#faq" className={styles.navLink}>FAQs</a>
         </nav>
-        <button 
-          ref={ctaRef} 
+
+        <button
+          ref={ctaRef}
           className={styles.ctaButton}
           onClick={handleDownloadClick}
           aria-label="Download DeutschGenie app"
         >
           Download now
         </button>
+
+        <button
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
+          <span className={`${styles.bar} ${menuOpen ? styles.bar1Open : ''}`} />
+          <span className={`${styles.bar} ${menuOpen ? styles.bar2Open : ''}`} />
+          <span className={`${styles.bar} ${menuOpen ? styles.bar3Open : ''}`} />
+        </button>
       </div>
+
+      {menuOpen && (
+        <div className={styles.mobileMenu}>
+          <a href="#how-it-works" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>How it Works</a>
+          <a href="#results" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Results</a>
+          <a href="#faq" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>FAQs</a>
+          <button className={styles.mobileCta} onClick={handleDownloadClick}>Download now</button>
+        </div>
+      )}
     </header>
   )
 }
 
 export default Header
-

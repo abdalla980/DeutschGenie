@@ -1,7 +1,7 @@
 .footer {
   padding: 2rem;
-  background: #f9f9f9;
-  border-top: 1px solid #e0e0e0;
+  background: #FFF3DA;
+  border-top: 1px solid #e8dfc0;
 }
 
 .container {
@@ -19,37 +19,10 @@
   gap: 1rem;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logoIcon {
-  width: 30px;
-  height: 30px;
-  background: #ff6b35;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  font-weight: bold;
-}
-
-.logoD {
-  color: white;
-  font-size: 0.9rem;
-  position: absolute;
-  left: 6px;
-  top: 6px;
-}
-
-.logoG {
-  color: white;
-  font-size: 0.9rem;
-  position: absolute;
-  right: 6px;
-  bottom: 6px;
+.logoImg {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
 }
 
 .copyright {
@@ -95,5 +68,3 @@
     gap: 1.5rem;
   }
 }
-
-

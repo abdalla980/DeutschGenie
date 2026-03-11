@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer'
 
 function App() {
   return (
-    <div className="App" style={{ minHeight: '100vh', backgroundColor: '#fff' }}>
+    <div className="App" style={{ minHeight: '100vh', backgroundColor: '#FFF3DA' }}>
       <Header />
       <main>
         <Hero />

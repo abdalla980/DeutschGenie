@@ -52,28 +52,28 @@ const HowItWorks = () => {
       number: 1,
       title: 'Select your German level',
       description: 'Beginner to advanced',
-      color: 'blue',
+      color: 'pink',
       icon: '□'
     },
     {
       number: 2,
-      title: 'Choose what you want to practice',
-      description: 'Grammar, Vocabulary, Listening, Reading & Writing',
-      color: 'orange',
-      icon: '✎'
-    },
-    {
-      number: 3,
-      title: 'Get Content that adjust to your level',
+      title: '70+ Games that adjust to your level',
       description: 'From more options to a lot of options for you',
-      color: 'purple',
+      color: 'teal',
       icon: '💬'
     },
     {
+      number: 3,
+      title: 'Choose what you want to practice',
+      description: 'Grammar, Vocabulary, Listening, Reading & Writing',
+      color: 'yellow',
+      icon: '✎'
+    },
+    {
       number: 4,
-      title: 'Get Corrected Instantly',
+      title: 'Get Corrected',
       description: 'Your skills improve with instant feedback on your answers',
-      color: 'green',
+      color: 'olive',
       icon: '✓'
     }
   ]

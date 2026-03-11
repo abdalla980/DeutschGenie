@@ -12,9 +12,9 @@ const AppDownload = () => {
 
   useEffect(() => {
     if (!qrContainerRef.current || !decorativeRef.current || !sectionRef.current) return
-    
+
     const triggers = []
-    
+
     const qrTrigger = gsap.from(qrContainerRef.current, {
       y: 30,
       scale: 0.9,
@@ -50,57 +50,13 @@ const AppDownload = () => {
         <div ref={qrContainerRef} className={styles.qrContainer}>
           <div className={styles.qrCode}>
             <div className={styles.qrPlaceholder}>
-              <svg viewBox="0 0 200 200" className={styles.qrSvg}>
-                <rect width="200" height="200" fill="white" />
-                <rect x="0" y="0" width="60" height="60" fill="black" />
-                <rect x="140" y="0" width="60" height="60" fill="black" />
-                <rect x="0" y="140" width="60" height="60" fill="black" />
-                <rect x="20" y="20" width="20" height="20" fill="white" />
-                <rect x="160" y="20" width="20" height="20" fill="white" />
-                <rect x="20" y="160" width="20" height="20" fill="white" />
-                <rect x="60" y="60" width="10" height="10" fill="black" />
-                <rect x="80" y="60" width="10" height="10" fill="black" />
-                <rect x="100" y="60" width="10" height="10" fill="black" />
-                <rect x="130" y="60" width="10" height="10" fill="black" />
-                <rect x="60" y="80" width="10" height="10" fill="black" />
-                <rect x="130" y="80" width="10" height="10" fill="black" />
-                <rect x="60" y="100" width="10" height="10" fill="black" />
-                <rect x="80" y="100" width="10" height="10" fill="black" />
-                <rect x="100" y="100" width="10" height="10" fill="black" />
-                <rect x="130" y="100" width="10" height="10" fill="black" />
-                <rect x="60" y="130" width="10" height="10" fill="black" />
-                <rect x="80" y="130" width="10" height="10" fill="black" />
-                <rect x="100" y="130" width="10" height="10" fill="black" />
-                <rect x="130" y="130" width="10" height="10" fill="black" />
-              </svg>
+              <img src="/images/qrcode.png" alt="App Store QR code" className={styles.qrImg} />
             </div>
             <p className={styles.qrLabel}>App store</p>
           </div>
           <div className={styles.qrCode}>
             <div className={styles.qrPlaceholder}>
-              <svg viewBox="0 0 200 200" className={styles.qrSvg}>
-                <rect width="200" height="200" fill="white" />
-                <rect x="0" y="0" width="60" height="60" fill="black" />
-                <rect x="140" y="0" width="60" height="60" fill="black" />
-                <rect x="0" y="140" width="60" height="60" fill="black" />
-                <rect x="20" y="20" width="20" height="20" fill="white" />
-                <rect x="160" y="20" width="20" height="20" fill="white" />
-                <rect x="20" y="160" width="20" height="20" fill="white" />
-                <rect x="60" y="60" width="10" height="10" fill="black" />
-                <rect x="80" y="60" width="10" height="10" fill="black" />
-                <rect x="100" y="60" width="10" height="10" fill="black" />
-                <rect x="130" y="60" width="10" height="10" fill="black" />
-                <rect x="60" y="80" width="10" height="10" fill="black" />
-                <rect x="130" y="80" width="10" height="10" fill="black" />
-                <rect x="60" y="100" width="10" height="10" fill="black" />
-                <rect x="80" y="100" width="10" height="10" fill="black" />
-                <rect x="100" y="100" width="10" height="10" fill="black" />
-                <rect x="130" y="100" width="10" height="10" fill="black" />
-                <rect x="60" y="130" width="10" height="10" fill="black" />
-                <rect x="80" y="130" width="10" height="10" fill="black" />
-                <rect x="100" y="130" width="10" height="10" fill="black" />
-                <rect x="130" y="130" width="10" height="10" fill="black" />
-              </svg>
+              <img src="/images/qrcode.png" alt="Google Play QR code" className={styles.qrImg} />
             </div>
             <p className={styles.qrLabel}>Google Play</p>
           </div>
@@ -112,4 +68,3 @@ const AppDownload = () => {
 }
 
 export default AppDownload
-

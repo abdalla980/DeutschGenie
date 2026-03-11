@@ -1,6 +1,6 @@
 .section {
   padding: 5rem 2rem;
-  background: #fff;
+  background: #FFF3DA;
 }
 
 .container {
@@ -51,6 +51,7 @@
 .stepNumber {
   font-size: 1.5rem;
   font-weight: 700;
+  margin-top: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -67,44 +68,54 @@
   flex: 1;
 }
 
-.blue {
-  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-  border-top: 4px solid #2196f3;
+.pink {
+  background: #F4A89A;
+  border-top: none;
 }
 
-.orange {
-  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-  border-top: 4px solid #ff9800;
+.teal {
+  background: #8ECCC4;
+  border-top: none;
 }
 
-.purple {
-  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
-  border-top: 4px solid #9c27b0;
+.yellow {
+  background: #F5C87A;
+  border-top: none;
 }
 
-.green {
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-  border-top: 4px solid #4caf50;
+.olive {
+  background: #8B8C5B;
+  border-top: none;
+  color: #fff;
+}
+
+.olive .stepDescription {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.25rem;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
   }
 
   .steps {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .step {
-    min-height: 200px;
+    min-height: unset;
     padding: 1.5rem;
+    transform: none;
+  }
+
+  .step:hover {
+    transform: none;
   }
 }
 

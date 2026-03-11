@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import styles from './Hero.module.css'
 
+const APP_URL = 'https://www.figma.com/design/QrB7vsHSaOpkQC28sIHnm1/DeutschGenie?node-id=0-1&t=O0iBNmm3eIHT8bkC-1'
+
 const Hero = () => {
   const cardRef = useRef(null)
   const imagesRef = useRef(null)
@@ -20,13 +22,6 @@ const Hero = () => {
     }
   }, [])
 
-  const handleTryNow = () => {
-    const downloadSection = document.querySelector('[data-section="download"]')
-    if (downloadSection) {
-      downloadSection.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
@@ -37,13 +32,15 @@ const Hero = () => {
           <p className={styles.subtext}>
             DeutschGenie offers a wide range of fun and interactive games to help you improve your German skills.
           </p>
-          <button
+          <a
+            href={APP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.ctaButton}
-            onClick={handleTryNow}
             aria-label="Try DeutschGenie now"
           >
             Try it now!
-          </button>
+          </a>
         </div>
         <div ref={imagesRef} className={styles.images}>
           <img src="/images/app-screenshot.png" alt="DeutschGenie app screenshot 1" className={styles.heroImage1} />

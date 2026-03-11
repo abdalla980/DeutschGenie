@@ -3,24 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Practice German Online with Fun Learning Games. DeutschGenie offers interactive games to improve your German skills for all levels.">
-  <meta name="keywords" content="German learning, German games, learn German, German practice, DeutschGenie">
+  <meta name="description" content="Practice German online with fun learning games. DeutschGenie offers 70+ interactive games covering grammar, vocabulary, listening, reading and writing for all levels.">
+  <meta name="keywords" content="learn German, German games, German learning app, practice German, DeutschGenie, German vocabulary, German grammar">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FFF3DA">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DeutschGenie - Practice German Online with Fun Learning Games">
+  <meta property="og:description" content="Practice German online with fun learning games. 70+ interactive games for all levels covering grammar, vocabulary, listening, reading and writing.">
+  <meta property="og:image" content="/images/logo.png">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DeutschGenie - Practice German Online with Fun Learning Games">
+  <meta name="twitter:description" content="Practice German online with fun learning games. 70+ interactive games for all levels.">
+  <meta name="twitter:image" content="/images/logo.png">
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇩🇪</text></svg>">
-  <title>DeutschGenie - Practice German Online with Fun Learning Games</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <title>DeutschGenie - Practice German Online with Fun Learning Games</title>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://deutschgenie.app/#website",
+        "url": "https://deutschgenie.app/",
+        "name": "DeutschGenie",
+        "description": "Practice German Online with Fun Learning Games",
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://deutschgenie.app/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://deutschgenie.app/#webpage",
+        "url": "https://deutschgenie.app/",
+        "name": "DeutschGenie - Practice German Online with Fun Learning Games",
+        "description": "Practice German online with fun learning games. DeutschGenie offers 70+ interactive games for all levels.",
+        "isPartOf": { "@id": "https://deutschgenie.app/#website" },
+        "about": { "@id": "https://deutschgenie.app/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://deutschgenie.app/#organization",
+        "name": "DeutschGenie",
+        "url": "https://deutschgenie.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deutschgenie.app/images/logo.png",
+          "width": 200,
+          "height": 60
+        },
+        "description": "Practice German Online with Fun Learning Games",
+        "foundingDate": "2024",
+        "knowsAbout": ["German language learning", "Language education", "Educational games", "Gamification"]
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "DeutschGenie",
+        "url": "https://deutschgenie.app/",
+        "description": "Online German language learning platform using gamification",
+        "teaches": "German language",
+        "educationalCredentialAwarded": "German language proficiency"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://deutschgenie.app/#app",
+        "name": "DeutschGenie",
+        "applicationCategory": "EducationApplication",
+        "applicationSubCategory": "Language Learning",
+        "operatingSystem": "iOS, Android",
+        "description": "Practice German online with fun interactive games covering grammar, vocabulary, listening, reading and writing for all levels.",
+        "inLanguage": "de",
+        "url": "https://deutschgenie.app/",
+        "author": { "@id": "https://deutschgenie.app/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "10000",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "featureList": [
+          "70+ German learning games",
+          "Adaptive difficulty levels",
+          "Grammar practice",
+          "Vocabulary building",
+          "Listening exercises",
+          "Reading comprehension",
+          "Writing practice",
+          "Offline support",
+          "Progress tracking",
+          "Short focused sessions"
+        ]
+      },
+      {
         "@type": "MobileApplication",
         "name": "DeutschGenie",
-        "description": "Practice German online with fun learning games. DeutschGenie offers interactive games for all levels covering grammar, vocabulary, listening, reading and writing.",
         "applicationCategory": "EducationApplication",
-        "operatingSystem": "iOS, Android",
-        "inLanguage": "de",
+        "operatingSystem": "iOS",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -29,17 +126,84 @@
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.8",
-          "reviewCount": "10000"
+          "ratingCount": "10000"
         }
       },
       {
-        "@type": "Organization",
+        "@type": "MobileApplication",
         "name": "DeutschGenie",
-        "description": "Practice German Online with Fun Learning Games",
-        "numberOfEmployees": {
-          "@type": "QuantitativeValue",
-          "value": "10000"
+        "applicationCategory": "EducationApplication",
+        "operatingSystem": "Android",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "10000"
         }
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to start learning German with DeutschGenie",
+        "description": "Get started with DeutschGenie in 4 simple steps",
+        "totalTime": "PT5M",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Select your German level",
+            "text": "Choose your level from beginner to advanced so the app can personalise content for you."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Play 70+ games that adjust to your level",
+            "text": "Access over 70 games that dynamically adapt to your current proficiency."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Choose what you want to practice",
+            "text": "Select from grammar, vocabulary, listening, reading or writing."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Get corrected instantly",
+            "text": "Receive instant feedback on your answers to improve your skills faster."
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "DeutschGenie App Features",
+        "description": "Key features of the DeutschGenie German learning app",
+        "itemListOrder": "https://schema.org/ItemListUnordered",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Multiple games based on German level"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Grammar, vocabulary, listening, reading and writing practice"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Learn from anywhere at any time"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Short sessions that work"
+          }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -49,7 +213,15 @@
             "name": "Is DeutschGenie suitable for beginners?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, DeutschGenie caters to all levels, from complete beginners to advanced learners. You can select your level when you start and the app adjusts accordingly."
+              "text": "Yes, DeutschGenie caters to all levels from complete beginners to advanced learners. You can select your level when you start and the app adjusts the content accordingly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the app adjust content to my level?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DeutschGenie uses an adaptive learning system that tracks your progress and adjusts the difficulty of games based on your performance."
             }
           },
           {
@@ -57,10 +229,26 @@
             "name": "Can I use DeutschGenie offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, once you download the app and sync your content, you can practice German offline."
+              "text": "Yes, once you download the app and sync your content, you can practice German offline. This makes it perfect for learning on the go."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of games are available in DeutschGenie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DeutschGenie offers games covering grammar, vocabulary, listening, reading and writing. Each category has multiple game types to keep your learning experience fun and engaging."
             }
           }
         ]
+      },
+      {
+        "@type": "AggregateRating",
+        "itemReviewed": { "@id": "https://deutschgenie.app/#app" },
+        "ratingValue": "4.8",
+        "ratingCount": "10000",
+        "bestRating": "5",
+        "worstRating": "1"
       }
     ]
   }
@@ -71,4 +259,3 @@
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
-

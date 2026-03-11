@@ -5,6 +5,8 @@ import styles from './AppDownload.module.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const APP_URL = 'https://www.figma.com/design/QrB7vsHSaOpkQC28sIHnm1/DeutschGenie?node-id=0-1&t=O0iBNmm3eIHT8bkC-1'
+
 const AppDownload = () => {
   const sectionRef = useRef(null)
   const qrContainerRef = useRef(null)
@@ -48,18 +50,18 @@ const AppDownload = () => {
     <section ref={sectionRef} data-section="download" className={styles.section}>
       <div className={styles.container}>
         <div ref={qrContainerRef} className={styles.qrContainer}>
-          <div className={styles.qrCode}>
+          <a href={APP_URL} target="_blank" rel="noopener noreferrer" className={styles.qrCode}>
             <div className={styles.qrPlaceholder}>
               <img src="/images/qrcode.png" alt="App Store QR code" className={styles.qrImg} />
             </div>
             <p className={styles.qrLabel}>App store</p>
-          </div>
-          <div className={styles.qrCode}>
+          </a>
+          <a href={APP_URL} target="_blank" rel="noopener noreferrer" className={styles.qrCode}>
             <div className={styles.qrPlaceholder}>
               <img src="/images/qrcode.png" alt="Google Play QR code" className={styles.qrImg} />
             </div>
             <p className={styles.qrLabel}>Google Play</p>
-          </div>
+          </a>
         </div>
         <div ref={decorativeRef} className={styles.decorative}></div>
       </div>

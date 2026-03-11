@@ -70,6 +70,7 @@
   opacity: 1;
   white-space: nowrap;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .ctaButton:hover {

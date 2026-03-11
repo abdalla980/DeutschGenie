@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer'
 
 function App() {
   return (
-    <div className="App" style={{ minHeight: '100vh', backgroundColor: '#FFF3DA' }}>
+    <div className="App">
       <Header />
       <main>
         <Hero />
@@ -27,4 +27,3 @@ function App() {
 }
 
 export default App
-

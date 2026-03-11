@@ -40,9 +40,10 @@
 }
 
 .ctaButton {
+  display: inline-block;
   background: #4285f4;
   color: white;
-  border: none;
+  text-decoration: none;
   padding: 0.85rem 2rem;
   border-radius: 12px;
   font-size: 1rem;
